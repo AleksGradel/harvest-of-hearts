@@ -9,7 +9,11 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy-graphql": "sanity graphql deploy",
+    "build:ndjson": "node data/to-ndjson.js",
+    "import:characters": "sanity dataset import data/characters.ndjson production --replace",
+    "import:items": "sanity dataset import data/items.ndjson production --replace",
+    "import:all": "npm run import:characters && npm run import:items"
   },
   "keywords": [
     "sanity"

@@ -1,0 +1,616 @@
+[
+	{
+		"_type": "character",
+		"_id": "alex",
+		"name": "Alex",
+		"description": "Alex is an aspiring athlete who dreams of being a professional gridball player.",
+		"image": {
+			"_type": "image",
+			"asset": {
+				"_type": "reference",
+				"_ref": "image-alex"
+			}
+		},
+		"loves": [
+			{
+				"_type": "reference",
+				"_ref": "complete-breakfast"
+			},
+			{
+				"_type": "reference",
+				"_ref": "salmon-dinner"
+			}
+		],
+		"likes": [
+			{
+				"_type": "reference",
+				"_ref": "egg"
+			},
+			{
+				"_type": "reference",
+				"_ref": "milk"
+			}
+		],
+		"dislikes": [],
+		"hates": []
+	},
+	{
+		"_type": "character",
+		"_id": "elliott",
+		"name": "Elliott",
+		"description": "Elliott lives alone in a cabin on the beach. He’s a writer with a poetic soul.",
+		"image": {
+			"_type": "image",
+			"asset": {
+				"_type": "reference",
+				"_ref": "image-elliott"
+			}
+		},
+		"loves": [
+			{
+				"_type": "reference",
+				"_ref": "crab-cakes"
+			},
+			{
+				"_type": "reference",
+				"_ref": "duck-feather"
+			},
+			{
+				"_type": "reference",
+				"_ref": "lobster"
+			},
+			{
+				"_type": "reference",
+				"_ref": "pomegranate"
+			},
+			{
+				"_type": "reference",
+				"_ref": "tom-kha-soup"
+			}
+		],
+		"likes": [
+			{
+				"_type": "reference",
+				"_ref": "clams"
+			},
+			{
+				"_type": "reference",
+				"_ref": "coral"
+			}
+		],
+		"dislikes": [],
+		"hates": []
+	},
+	{
+		"_type": "character",
+		"_id": "harvey",
+		"name": "Harvey",
+		"description": "Harvey is the local doctor and loves vintage things, coffee, and jazz music.",
+		"image": {
+			"_type": "image",
+			"asset": {
+				"_type": "reference",
+				"_ref": "image-harvey"
+			}
+		},
+		"loves": [
+			{
+				"_type": "reference",
+				"_ref": "coffee"
+			},
+			{
+				"_type": "reference",
+				"_ref": "pickles"
+			},
+			{
+				"_type": "reference",
+				"_ref": "super-meal"
+			},
+			{
+				"_type": "reference",
+				"_ref": "truffle-oil"
+			},
+			{
+				"_type": "reference",
+				"_ref": "wine"
+			}
+		],
+		"likes": [],
+		"dislikes": [],
+		"hates": []
+	},
+	{
+		"_type": "character",
+		"_id": "sam",
+		"name": "Sam",
+		"description": "Sam is a energetic young man with a passion for music and skateboarding.",
+		"image": {
+			"_type": "image",
+			"asset": {
+				"_type": "reference",
+				"_ref": "image-sam"
+			}
+		},
+		"loves": [
+			{
+				"_type": "reference",
+				"_ref": "cactus-fruit"
+			},
+			{
+				"_type": "reference",
+				"_ref": "maple-bar"
+			},
+			{
+				"_type": "reference",
+				"_ref": "pizza"
+			},
+			{
+				"_type": "reference",
+				"_ref": "tigerseye"
+			}
+		],
+		"likes": [],
+		"dislikes": [],
+		"hates": []
+	},
+	{
+		"_type": "character",
+		"_id": "sebastian",
+		"name": "Sebastian",
+		"description": "Sebastian is a reclusive programmer who lives in his parents’ basement.",
+		"image": {
+			"_type": "image",
+			"asset": {
+				"_type": "reference",
+				"_ref": "image-sebastian"
+			}
+		},
+		"loves": [
+			{
+				"_type": "reference",
+				"_ref": "frozen-tear"
+			},
+			{
+				"_type": "reference",
+				"_ref": "obsidian"
+			},
+			{
+				"_type": "reference",
+				"_ref": "pumpkin-soup"
+			},
+			{
+				"_type": "reference",
+				"_ref": "sashimi"
+			},
+			{
+				"_type": "reference",
+				"_ref": "void-egg"
+			}
+		],
+		"likes": [],
+		"dislikes": [],
+		"hates": []
+	},
+	{
+		"_type": "character",
+		"_id": "shane",
+		"name": "Shane",
+		"description": "Shane is a blunt, awkward man who likes beer and working at JojaMart.",
+		"image": {
+			"_type": "image",
+			"asset": {
+				"_type": "reference",
+				"_ref": "image-shane"
+			}
+		},
+		"loves": [
+			{
+				"_type": "reference",
+				"_ref": "beer"
+			},
+			{
+				"_type": "reference",
+				"_ref": "hot-pepper"
+			},
+			{
+				"_type": "reference",
+				"_ref": "pepper-poppers"
+			},
+			{
+				"_type": "reference",
+				"_ref": "pizza"
+			}
+		],
+		"likes": [],
+		"dislikes": [],
+		"hates": []
+	},
+	{
+		"_type": "character",
+		"_id": "leah",
+		"name": "Leah",
+		"description": "Nature-loving artist who lives alone in a small cottage outside of Pelican Town.",
+		"image": {
+			"_type": "image",
+			"asset": {
+				"_type": "reference",
+				"_ref": "image-leah-portrait"
+			}
+		},
+		"loves": [
+			{
+				"_type": "reference",
+				"_ref": "goat-cheese"
+			},
+			{
+				"_type": "reference",
+				"_ref": "poppyseed-muffin"
+			},
+			{
+				"_type": "reference",
+				"_ref": "salad"
+			},
+			{
+				"_type": "reference",
+				"_ref": "stir-fry"
+			},
+			{
+				"_type": "reference",
+				"_ref": "truffle"
+			},
+			{
+				"_type": "reference",
+				"_ref": "vegetable-medley"
+			},
+			{
+				"_type": "reference",
+				"_ref": "wine"
+			}
+		],
+		"likes": [
+			{
+				"_type": "reference",
+				"_ref": "daffodil"
+			},
+			{
+				"_type": "reference",
+				"_ref": "dandelion"
+			},
+			{
+				"_type": "reference",
+				"_ref": "common-mushroom"
+			},
+			{
+				"_type": "reference",
+				"_ref": "driftwood"
+			}
+		],
+		"dislikes": [
+			{
+				"_type": "reference",
+				"_ref": "clay"
+			},
+			{
+				"_type": "reference",
+				"_ref": "coral"
+			}
+		],
+		"hates": [
+			{
+				"_type": "reference",
+				"_ref": "trash"
+			},
+			{
+				"_type": "reference",
+				"_ref": "joja-cola"
+			},
+			{
+				"_type": "reference",
+				"_ref": "seaweed"
+			}
+		]
+	},
+	{
+    "_type": "character",
+    "_id": "abigail",
+    "name": "Abigail",
+    "description": "Abigail lives at the general store and has a rebellious streak. She's into the occult and video games.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-abigail" }
+    },
+    "loves": [
+      { "_type": "reference", "_ref": "amethyst" },
+      { "_type": "reference", "_ref": "banana-pudding" },
+      { "_type": "reference", "_ref": "blackberry-cobbler" },
+      { "_type": "reference", "_ref": "chocolate-cake" },
+      { "_type": "reference", "_ref": "pumpkin" },
+      { "_type": "reference", "_ref": "spicy-eel" }
+    ],
+    "likes": [],
+    "dislikes": [],
+    "hates": []
+  },
+  {
+    "_type": "character",
+    "_id": "emily",
+    "name": "Emily",
+    "description": "Emily is an eccentric, spiritual soul who loves making her own clothes and crystals.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-emily" }
+    },
+    "loves": [
+      { "_type": "reference", "_ref": "amethyst" },
+      { "_type": "reference", "_ref": "aquamarine" },
+      { "_type": "reference", "_ref": "cloth" },
+      { "_type": "reference", "_ref": "emerald" },
+      { "_type": "reference", "_ref": "jade" },
+      { "_type": "reference", "_ref": "ruby" },
+      { "_type": "reference", "_ref": "survival-burger" },
+      { "_type": "reference", "_ref": "topaz" },
+      { "_type": "reference", "_ref": "wool" }
+    ],
+    "likes": [],
+    "dislikes": [],
+    "hates": []
+  },
+  {
+    "_type": "character",
+    "_id": "haley",
+    "name": "Haley",
+    "description": "Haley is a popular girl who’s into fashion and photography, but she may surprise you.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-haley" }
+    },
+    "loves": [
+      { "_type": "reference", "_ref": "coconut" },
+      { "_type": "reference", "_ref": "fruit-salad" },
+      { "_type": "reference", "_ref": "pink-cake" },
+      { "_type": "reference", "_ref": "sunflower" }
+    ],
+    "likes": [],
+    "dislikes": [],
+    "hates": []
+  },
+  {
+    "_type": "character",
+    "_id": "maru",
+    "name": "Maru",
+    "description": "Maru is an intelligent inventor who works at the clinic and builds gadgets in her spare time.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-maru" }
+    },
+    "loves": [
+      { "_type": "reference", "_ref": "battery-pack" },
+      { "_type": "reference", "_ref": "cauliflower" },
+      { "_type": "reference", "_ref": "cheese-cauliflower" },
+      { "_type": "reference", "_ref": "diamond" },
+      { "_type": "reference", "_ref": "gold-bar" },
+      { "_type": "reference", "_ref": "honey" },
+      { "_type": "reference", "_ref": "minestrone" },
+      { "_type": "reference", "_ref": "pepper-poppers" },
+      { "_type": "reference", "_ref": "radioactive-bar" },
+      { "_type": "reference", "_ref": "strawberry" }
+    ],
+    "likes": [],
+    "dislikes": [],
+    "hates": []
+  },
+  {
+    "_type": "character",
+    "_id": "penny",
+    "name": "Penny",
+    "description": "Penny is a kind-hearted teacher who lives in a trailer with her mother Pam.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-penny" }
+    },
+    "loves": [
+      { "_type": "reference", "_ref": "diamond" },
+      { "_type": "reference", "_ref": "emerald" },
+      { "_type": "reference", "_ref": "melon" },
+      { "_type": "reference", "_ref": "poppy" },
+      { "_type": "reference", "_ref": "poppyseed-muffin" },
+      { "_type": "reference", "_ref": "red-plate" },
+      { "_type": "reference", "_ref": "roots-platter" },
+      { "_type": "reference", "_ref": "sandfish" },
+      { "_type": "reference", "_ref": "tom-kha-soup" }
+    ],
+    "likes": [],
+    "dislikes": [],
+    "hates": []
+  },
+  {
+    "_type": "character",
+    "_id": "caroline",
+    "name": "Caroline",
+    "description": "Caroline is Pierre's wife and Abigail's mother. She spends her time in the shop and enjoys tea.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-caroline" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "clint",
+    "name": "Clint",
+    "description": "Clint is the local blacksmith who forges and upgrades tools for a price.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-clint" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "demetrius",
+    "name": "Demetrius",
+    "description": "Demetrius is a scientist and Maru’s father. He studies local wildlife.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-demetrius" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "dwarf",
+    "name": "Dwarf",
+    "description": "The Dwarf lives in the mines and speaks Dwarvish until you learn the language.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-dwarf" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "evelyn",
+    "name": "Evelyn",
+    "description": "Evelyn is an elderly resident who loves gardening and baking cookies.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-evelyn" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "george",
+    "name": "George",
+    "description": "George is a grumpy but lovable old man in a wheelchair. He’s Evelyn’s husband.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-george" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "gus",
+    "name": "Gus",
+    "description": "Gus runs the Stardrop Saloon and is known for his cooking and kindness.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-gus" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "jas",
+    "name": "Jas",
+    "description": "Jas is a shy, young girl who lives with Marnie. She loves animals and drawing.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-jas" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "jodi",
+    "name": "Jodi",
+    "description": "Jodi is a kind mother of two who lives in Pelican Town and enjoys cooking.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-jodi" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "krobus",
+    "name": "Krobus",
+    "description": "Krobus is a friendly Shadow Brute who lives in the sewers. You can live with him as a roommate.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-krobus" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "lewis",
+    "name": "Lewis",
+    "description": "Mayor Lewis has been the mayor of Pelican Town for over twenty years.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-lewis" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "linus",
+    "name": "Linus",
+    "description": "Linus lives a simple life in a tent near the mines. He values nature and solitude.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-linus" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "marnie",
+    "name": "Marnie",
+    "description": "Marnie runs the local animal shop. She takes care of Jas and has a secret with Mayor Lewis.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-marnie" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "pam",
+    "name": "Pam",
+    "description": "Pam is Penny’s mother and the town’s bus driver. She enjoys a drink at the Saloon.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-pam" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "pierre",
+    "name": "Pierre",
+    "description": "Pierre owns the general store and is Caroline’s husband. He's competitive with JojaMart.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-pierre" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "robin",
+    "name": "Robin",
+    "description": "Robin is the town carpenter and Demetrius’ wife. She’s friendly and energetic.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-robin" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "vincent",
+    "name": "Vincent",
+    "description": "Vincent is a young boy who lives with Jodi and Kent. He loves candy and bugs.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-vincent" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "willy",
+    "name": "Willy",
+    "description": "Willy runs the fish shop by the beach and loves the sea.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-willy" }
+    }
+  },
+  {
+    "_type": "character",
+    "_id": "wizard",
+    "name": "Wizard",
+    "description": "The Wizard lives in the tower in Cindersap Forest and studies magical phenomena.",
+    "image": {
+      "_type": "image",
+      "asset": { "_type": "reference", "_ref": "image-wizard" }
+    }
+  }
+]
