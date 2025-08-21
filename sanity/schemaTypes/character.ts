@@ -8,6 +8,8 @@ export default defineType({
     defineField({name: 'name', title: 'Name', type: 'string'}),
     defineField({name: 'image', title: 'Image', type: 'image'}),
     defineField({name: 'description', title: 'Description', type: 'text'}),
+    defineField({name: 'birthday', title: 'Birthday', type: 'string'}),
+	  defineField({name: 'location', title: 'Location', type: 'string'}),
     defineField({
       name: 'loves',
       title: 'Loves',

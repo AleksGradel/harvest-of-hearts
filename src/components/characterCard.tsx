@@ -20,7 +20,7 @@ interface CharacterCardProps {
 export const CharacterCard = ({ character }: CharacterCardProps) => {
 	return (
 		<Link href={`/characters/${character.slug}`}>
-			<div className='rounded-2xl border shadow-md p-4 bg-white hover:shadow-lg transition'>
+			<div className='rounded-2xl shadow-md p-4 bg-white hover:shadow-lg transition'>
 				{character.image?.asset?.url && (
 					<div className='w-full h-48 relative mb-4 -mt-16'>
 						<Image
