@@ -6,6 +6,20 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({name: 'name', title: 'Name', type: 'string'}),
+	defineField({
+      name: 'slug',
+      title: 'ID',
+      type: 'slug',
+      options: {
+        source: 'name',
+        slugify: (input: string) =>
+          input
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^a-z0-9-]/g, '')
+            .slice(0, 50),
+      },
+    }),
     defineField({name: 'imageUrl', title: 'Image URL', type: 'url'}),
     defineField({name: 'description', title: 'Description', type: 'text'}),
     defineField({
@@ -22,8 +36,12 @@ export default defineType({
           {title: 'Forage', value: 'forage'},
           {title: 'Animal Product', value: 'animal'},
           {title: 'Cooking', value: 'cooking'},
+          {title: 'Cooking Ingredient', value: 'cooking-ingredient'},
           {title: 'Resource', value: 'resource'},
           {title: 'Trash', value: 'trash'},
+          {title: 'Artifacts', value: 'artifacts'},
+          {title: 'Trinkets', value: 'trinkets'},
+          {title: 'Books', value: 'books'},
           {title: 'Other', value: 'other'},
         ],
         layout: 'dropdown',

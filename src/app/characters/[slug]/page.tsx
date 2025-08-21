@@ -1,3 +1,4 @@
+import GiftSection from '@/components/giftSection'
 import { sanityClient } from '@/lib/sanity/sanity'
 
 const characterQuery = `
@@ -11,7 +12,27 @@ const characterQuery = `
       asset->{
         url
       }
-    }
+    },
+	loves[]->{
+		_id,
+		name,
+		imageUrl
+	},
+	likes[]->{
+		_id,
+		name,
+		imageUrl
+	},
+	dislikes[]->{
+		_id,
+		name,
+		imageUrl
+	},
+	hates[]->{
+		_id,
+		name,
+		imageUrl
+	}
   }
 `
 
@@ -20,9 +41,8 @@ interface Props {
 }
 
 export default async function CharacterPage({ params }: Props) {
-	const character = await sanityClient.fetch(characterQuery, {
-		slug: params.slug,
-	})
+	const { slug } = await params
+  	const character = await sanityClient.fetch(characterQuery, { slug })
 
 	if (!character) {
 		return <div className='p-8'>Character not found</div>
@@ -48,6 +68,12 @@ export default async function CharacterPage({ params }: Props) {
 						{character.description}
 					</p>
 				</div>
+			</div>
+			<div>
+				<GiftSection title="Loved Gifts" emoji="❤️" gifts={character.loves} />
+				<GiftSection title="Liked Gifts" emoji="👍" gifts={character.likes} />
+				<GiftSection title="Disliked Gifts" emoji="👎" gifts={character.dislikes} />
+				<GiftSection title="Hated Gifts" emoji="💀" gifts={character.hates} />
 			</div>
 		</div>
 	)
