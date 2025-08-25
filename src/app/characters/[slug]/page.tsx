@@ -16,21 +16,25 @@ const characterQuery = `
 	loves[]->{
 		_id,
 		name,
+		slug,
 		imageUrl
 	},
 	likes[]->{
 		_id,
 		name,
+		slug,
 		imageUrl
 	},
 	dislikes[]->{
 		_id,
 		name,
+		slug,
 		imageUrl
 	},
 	hates[]->{
 		_id,
 		name,
+		slug,
 		imageUrl
 	}
   }

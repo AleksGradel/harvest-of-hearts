@@ -1,4 +1,4 @@
-export const charactersQuery = `*[_type == "character"]{
+export const charactersQuery = `*[_type == "character"] | order(name asc){
   _id,
   name,
   description,
@@ -23,3 +23,17 @@ export const charactersQuery = `*[_type == "character"]{
       _id, name, imageUrl
     }
 }`
+
+export const itemQuery = `*[_type == "item" && slug.current == $slug][0]{
+    _id,
+    name,
+    slug,
+    imageUrl,
+    description,
+    category,
+    "lovedBy": *[_type == "character" && references(^._id)]{
+      _id,
+      name,
+      slug
+    }
+  }`

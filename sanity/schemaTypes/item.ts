@@ -6,9 +6,9 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({name: 'name', title: 'Name', type: 'string'}),
-	defineField({
+    defineField({
       name: 'slug',
-      title: 'ID',
+      title: 'slug',
       type: 'slug',
       options: {
         source: 'name',

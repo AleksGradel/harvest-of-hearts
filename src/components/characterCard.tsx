@@ -1,17 +1,6 @@
+import { Character } from '@/lib/sanity/types'
 import Image from 'next/image'
 import Link from 'next/link'
-
-export interface Character {
-	_id: string
-	name: string
-	description?: string
-	slug?: string
-	image?: {
-		asset?: {
-			url: string
-		}
-	}
-}
 
 interface CharacterCardProps {
 	character: Character
@@ -20,9 +9,9 @@ interface CharacterCardProps {
 export const CharacterCard = ({ character }: CharacterCardProps) => {
 	return (
 		<Link href={`/characters/${character.slug}`}>
-			<div className='rounded-2xl shadow-md p-4 bg-white hover:shadow-lg transition'>
+			<div className='mt-6 rounded-2xl shadow-md p-4 bg-white hover:shadow-lg transition'>
 				{character.image?.asset?.url && (
-					<div className='w-full h-48 relative mb-4 -mt-16'>
+					<div className='w-full h-48 relative mb-2 -mt-16'>
 						<Image
 							src={character.image.asset.url}
 							alt={character.name}
@@ -32,7 +21,7 @@ export const CharacterCard = ({ character }: CharacterCardProps) => {
 					</div>
 				)}
 
-				<h2 className='text-lg font-semibold'>{character.name}</h2>
+				<h2 className='text-lg font-semibold text-center'>{character.name}</h2>
 			</div>
 		</Link>
 	)
