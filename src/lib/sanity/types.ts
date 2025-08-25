@@ -36,3 +36,10 @@ export interface Character {
   dislikes?: ItemReference[]
   hates?: ItemReference[]
 }
+
+export interface Item {
+  _id: string
+  name: string
+  slug: { current: string }
+  imageUrl?: string
+}
