@@ -1,3 +1,4 @@
+import CharacterSection from '@/components/characterSection'
 import { itemQuery } from '@/lib/sanity/queries'
 import { sanityClient } from '@/lib/sanity/sanity'
 import Image from 'next/image'
@@ -29,6 +30,12 @@ export default async function GiftPage({ params }: Props) {
 					</div>
 				)}
 				<p className='text-gray-600 text-sm'>{item.description}</p>
+			</div>
+			<div className='mt-4'>
+				<CharacterSection title="Loved by" emoji="❤️" characters={item.lovedBy}  />
+				<CharacterSection title="Liked by" emoji="👍" characters={item.likedBy}  />
+				<CharacterSection title="Disliked by" emoji="👎" characters={item.dislikedBy}  />
+				<CharacterSection title="Hated by" emoji="💀" characters={item.hatedBy}  />
 			</div>
 		</div>
 	)

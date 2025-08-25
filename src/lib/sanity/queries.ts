@@ -31,9 +31,36 @@ export const itemQuery = `*[_type == "item" && slug.current == $slug][0]{
     imageUrl,
     description,
     category,
-    "lovedBy": *[_type == "character" && references(^._id)]{
+    "lovedBy": *[_type == "character" && ^._id in loves[]._ref]{
       _id,
       name,
-      slug
+      slug,
+      image {
+        asset->{url}
+      },
+    },
+    "dislikedBy": *[_type == "character" && ^._id in dislikes[]._ref]{
+      _id,
+      name,
+      slug,
+      image {
+        asset->{url}
+      },
+    },
+    "hatedBy": *[_type == "character" && ^._id in hates[]._ref]{
+      _id,
+      name,
+      slug,
+      image {
+        asset->{url}
+      },
+    },
+    "likedBy": *[_type == "character" && ^._id in likes[]._ref]{
+      _id,
+      name,
+      slug,
+      image {
+        asset->{url}
+      },
     }
   }`
