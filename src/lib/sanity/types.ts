@@ -38,8 +38,29 @@ export interface Character {
 }
 
 export interface Item {
-  _id: string
-  name: string
-  slug: { current: string }
-  imageUrl?: string
+  _id: string;
+  _type: "item";
+  name: string;
+  slug: {
+    _type: "slug";
+    current: string;
+  };
+  imageUrl?: string;
+  description?: string;
+  category?:
+    | "food"
+    | "artisan"
+    | "crop"
+    | "fish"
+    | "mineral"
+    | "forage"
+    | "animal"
+    | "cooking"
+    | "cooking-ingredient"
+    | "resource"
+    | "trash"
+    | "artifacts"
+    | "trinkets"
+    | "books"
+    | "other";
 }

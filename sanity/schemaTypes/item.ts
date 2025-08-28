@@ -31,6 +31,7 @@ export default defineType({
           {title: 'Food', value: 'food'},
           {title: 'Artisan Good', value: 'artisan'},
           {title: 'Crop', value: 'crop'},
+          {title: 'Crafting', value: 'crafting'},
           {title: 'Fish', value: 'fish'},
           {title: 'Mineral', value: 'mineral'},
           {title: 'Forage', value: 'forage'},

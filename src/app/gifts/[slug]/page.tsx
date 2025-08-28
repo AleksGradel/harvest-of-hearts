@@ -1,6 +1,7 @@
 import CharacterSection from '@/components/characterSection'
 import { itemQuery } from '@/lib/sanity/queries'
 import { sanityClient } from '@/lib/sanity/sanity'
+import { Tag } from 'lucide-react'
 import Image from 'next/image'
 
 interface Props {
@@ -18,9 +19,9 @@ export default async function GiftPage({ params }: Props) {
 	return (
 		<div className='rounded-2xl shadow-md p-4 bg-white hover:shadow-lg transition'>
 			<div className='flex flex-col justify-center items-center'>
-				<h1 className='text-3xl font-bold'>{item.name}</h1>
+				<h1 className='text-3xl'>{item.name}</h1>
 				{item.imageUrl && (
-					<div>
+					<div className='my-2'>
 						<Image
 							src={item.imageUrl}
 							alt={item.name}
@@ -29,7 +30,10 @@ export default async function GiftPage({ params }: Props) {
 						/>
 					</div>
 				)}
-				<p className='text-gray-600 text-sm'>{item.description}</p>
+				<p className='text-gray-600 text-sm italic'>{item.description}</p>
+				<span className='flex bg-[#d98fa3] rounded-2xl p-2 mt-2 text-white text-xs capitalize'>
+					<Tag  size={16} className='mr-1'/>{item.category}
+				</span>
 			</div>
 			<div className='mt-4'>
 				<CharacterSection title="Loved by" emoji="❤️" characters={item.lovedBy}  />
