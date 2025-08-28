@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Item } from '@/lib/sanity/types'
+import { Search } from 'lucide-react'
 
 export default function HeaderSearch() {
 	const [query, setQuery] = useState('')
@@ -65,19 +66,24 @@ export default function HeaderSearch() {
 	return (
 		<div
 			ref={containerRef}
-			className='relative w-full max-w-md'
+			className='pt-2 relative mx-auto text-gray-600'
 		>
-			<input
-				type='text'
-				value={query}
-				onChange={(e) => {
-					setQuery(e.target.value)
-					setHighlightedIndex(-1)
-				}}
-				onKeyDown={handleKeyDown}
-				placeholder='Search items...'
-				className='p-2 border rounded w-full'
-			/>
+			<div className='relative'>
+				<Search className='absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5' />
+				<input
+					type='text'
+					value={query}
+					onChange={(e) => {
+						setQuery(e.target.value)
+						setHighlightedIndex(-1)
+					}}
+					placeholder='Search items...'
+					className='w-full bg-white bg-opacity-75 placeholder:text-slate-400 text-slate-700 
+					text-sm border border-slate-200 rounded-md pl-10 pr-3 py-2 transition duration-300 
+					ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm 
+					focus:shadow'
+				/>
+			</div>
 
 			{loading && <p className='absolute mt-1 text-gray-500'>Loading...</p>}
 
