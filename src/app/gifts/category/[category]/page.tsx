@@ -20,7 +20,7 @@ const query = groq`
 
 export async function generateMetadata({ params }: CategoryPageProps) {
   return {
-    title: `${params.category} Items`,
+    title: `${params.category} - Harvest of Hearts`,
   };
 }
 
