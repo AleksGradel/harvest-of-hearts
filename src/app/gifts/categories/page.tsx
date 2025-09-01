@@ -12,8 +12,8 @@ export default async function CategoriesIndexPage() {
   const categories: string[] = await sanityClient.fetch(categoriesQuery);
 
   return (
-    <main className="max-w-5xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-amber-900 mb-6">Categories</h1>
+    <main className="rounded-2xl shadow-lg p-4 bg-white">
+      <h1 className="flex justify-center text-xl font-bold mb-6">Categories</h1>
 
       {(!categories || categories.length === 0) ? (
         <p className="text-gray-600">No categories found.</p>
@@ -23,7 +23,8 @@ export default async function CategoriesIndexPage() {
             <li key={cat}>
               <Link
                 href={`/gifts/categories/${encodeURIComponent(cat)}`}
-                className="block p-4 bg-amber-50 border border-amber-200 rounded-xl shadow hover:bg-amber-100 transition text-center"
+                className="block p-4 bg-[#f2c0cd] border border-[#d98fa3] rounded-xl shadow 
+				hover:bg-[#e6a9b9] transition text-white text-center"
               >
                 <span className="capitalize">
                   {cat.replace(/-/g, " ")}

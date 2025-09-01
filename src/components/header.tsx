@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Search, Layers } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Item } from '@/lib/sanity/types'
+import { Span } from 'next/dist/trace'
 
 export default function Header() {
 	const [showSearch, setShowSearch] = useState(false)
@@ -68,22 +69,27 @@ export default function Header() {
 	}, [])
 
 	return (
-		<header className='w-full flex items-center justify-between p-4 bg-amber-50 shadow relative'>
-			<Link href='/'>
-				<h1 className='text-xl font-semibold text-amber-900'>
+		<header
+			className='w-full flex items-center justify-between p-4 bg-amber-50 shadow relative'
+			style={{ backgroundColor: '#d98fa3' }}
+		>
+			<Link href='/' className='flex'>
+				<h1 className='text-xl font-semibold text-white mr-2 hidden md:block'>
 					Harvest of Hearts
 				</h1>
+				<h1 className='text-xl'>🌾💖</h1>
 			</Link>
 			<div
-				className='flex items-center gap-3'
+				className='flex items-center gap-1 md:gap-3'
 				ref={containerRef}
 			>
 				<Link
 					href='/gifts/categories'
-					className='flex items-center gap-1 px-3 py-1 rounded-lg bg-amber-100 text-amber-900 hover:bg-amber-200 transition'
+					className='flex items-center gap-1 px-3 py-1 rounded-lg text-white border-none md:border 
+					hover:text-[#d98fa3] hover:bg-white transition'
 				>
-					<Layers className='w-4 h-4' />
-					Categories
+					<Layers className='w-5 h-5 md:w-4 md:h-4' />
+					<span className='hidden md:block'>Categories</span>
 				</Link>
 				<button
 					onClick={() => {
@@ -91,9 +97,9 @@ export default function Header() {
 						setQuery('')
 						setResults([])
 					}}
-					className='p-2 rounded-full hover:bg-amber-100 transition'
+					className='p-2 rounded-full hover:bg-white transition'
 				>
-					<Search className='w-5 h-5 text-amber-900' />
+					<Search className='w-5 h-5 text-white hover:text-[#d98fa3]' />
 				</button>
 				<AnimatePresence>
 					{showSearch && (
@@ -107,17 +113,18 @@ export default function Header() {
 						>
 							<input
 								type='text'
-								placeholder='Search items...'
+								placeholder='Search gifts...'
 								value={query}
 								onChange={(e) => {
 									setQuery(e.target.value)
 									setHighlightedIndex(-1)
 								}}
 								onKeyDown={handleKeyDown}
-								className='w-full px-3 py-1 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-400 text-sm'
+								className='w-full px-3 py-1 border border-white rounded-lg shadow-sm 
+								focus:outline-none focus:ring-1 focus:ring-slate-200 text-sm text-white'
 							/>
 							{isOpen && results.length > 0 && (
-								<ul className='absolute z-50 bg-white border mt-1 w-full max-h-80 overflow-y-auto shadow-md rounded'>
+								<ul className='absolute z-50 bg-white mt-1 w-full max-h-80 overflow-y-auto shadow-md rounded'>
 									{results.map((item, index) => (
 										<li
 											key={item._id}
@@ -145,7 +152,7 @@ export default function Header() {
 							)}
 
 							{loading && (
-								<p className='absolute mt-1 text-gray-500 text-sm'>
+								<p className='absolute w-full p-2 mt-1 text-gray-500 text-sm bg-white shadow-md rounded'>
 									Loading...
 								</p>
 							)}

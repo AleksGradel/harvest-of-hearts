@@ -13,9 +13,9 @@ export default function GiftSection({ title, emoji, gifts }: GiftSectionProps) {
 
   return (
     <div className="mb-6">
-      <h3 className="text-lg font-semibold mb-2">
+      <h1 className="font-semibold mb-2">
         {emoji} {title}
-      </h3>
+      </h1>
       <div className="flex flex-wrap gap-4">
         {gifts.map((gift) => (
           <Link key={gift._id} href={`/gifts/${gift.slug?.current}`}>
