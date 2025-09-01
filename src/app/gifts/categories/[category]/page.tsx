@@ -5,42 +5,45 @@ import groq from "groq";
 import { Item } from "@/lib/sanity/types";
 
 interface CategoryPageProps {
-  params: { category: string };
+  params: Promise<{ category: string }>
 }
 
 const query = groq`
   *[_type == "item" && category == $category] | order(name asc) {
     _id,
     name,
-    slug,
+    "slug": slug.current,
     imageUrl,
     category
   }
 `;
 
 export async function generateMetadata({ params }: CategoryPageProps) {
+  const { category } = await params;
+
   return {
-    title: `${params.category} - Harvest of Hearts`,
+    title: `${category} - Harvest of Hearts`,
   };
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const items: Item[] = await sanityClient.fetch(query, { category: params.category });
+  const { category } = await params
+  const items: Item[] = await sanityClient.fetch(query, { category: category });
 
   if (!items || items.length === 0) {
-    return <div>No items found for category {params.category}.</div>;
+    return <div>No items found for category {category}.</div>;
   }
 
   return (
     <div className="rounded-2xl shadow-md p-4 bg-white hover:shadow-lg transition">
       <h1 className="text-2xl font-bold mb-6 capitalize">
-        {params.category} Gifts
+        {category} Gifts
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
         {items.map((item) => (
           <Link
             key={item._id}
-            href={`/gifts/${item.slug.current}`}
+            href={`/gifts/${item.slug}`}
             className="border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition p-4 flex flex-col items-center"
           >
             {item.imageUrl && (

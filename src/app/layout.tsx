@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Link from 'next/link'
-import HeaderSearch from '@/components/headerSearch'
+import Header from '@/components/header'
 
 export const metadata: Metadata = {
 	title: 'Harvest of Hearts',
@@ -20,24 +19,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				<div className='min-h-screen bg-[#fff9f0] text-[#333]'>
-					<header className='sticky top-0 z-50 bg-[#d98fa3] text-white shadow-md'>
-						<div className='max-w-6xl mx-auto flex items-center justify-between px-6 py-3'>
-							<div className='text-center'>
-								<Link
-									href='/'
-									className='text-2xl'
-								>
-									Harvest of Hearts 🌾💝
-								</Link>
-								<p className='text-xs mt-1 italic'>
-									Know what they love. Harvest those hearts.
-								</p>
-							</div>
-							<div className='w-64'>
-								<HeaderSearch />
-							</div>
-						</div>
-					</header>
+					<Header  />
 					<main className='p-4 max-w-4xl mx-auto'>{children}</main>
 				</div>
 			</body>
