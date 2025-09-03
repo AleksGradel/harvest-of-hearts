@@ -1,5 +1,6 @@
 import GiftSection from '@/components/giftSection'
 import { sanityClient } from '@/lib/sanity/sanity'
+import groq from 'groq'
 
 const characterQuery = `
   *[_type == "character" && slug.current == $slug][0]{
@@ -40,8 +41,25 @@ const characterQuery = `
   }
 `
 
-interface Props {
-	params: { slug: string }
+type Props = {
+	params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props) {
+	const { slug } = await params
+
+	const character = await sanityClient.fetch(
+		groq`*[_type == "character" && slug.current == $slug][0]{
+      name
+    }`,
+		{ slug }
+	)
+
+	return {
+		title: character
+			? `${character.name} - Harvest of Hearts`
+			: 'Character - Harvest of Hearts',
+	}
 }
 
 export default async function CharacterPage({ params }: Props) {
@@ -73,9 +91,11 @@ export default async function CharacterPage({ params }: Props) {
 					{character.description}
 				</p>
 			</div>
-			<div className="inline-flex items-center justify-center w-full">
-				<hr className="w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-				<span className="absolute px-3 text-lg font-bold text-gray-900 -translate-x-1/2 bg-white left-1/2">Gift Guide 🎁</span>
+			<div className='inline-flex items-center justify-center w-full'>
+				<hr className='w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700' />
+				<span className='absolute px-3 text-lg font-bold text-gray-900 -translate-x-1/2 bg-white left-1/2'>
+					Gift Guide 🎁
+				</span>
 			</div>
 			<div>
 				<GiftSection

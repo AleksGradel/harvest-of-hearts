@@ -1,12 +1,27 @@
 import CharacterSection from '@/components/characterSection'
 import { itemQuery } from '@/lib/sanity/queries'
 import { sanityClient } from '@/lib/sanity/sanity'
+import groq from 'groq'
 import { Tag } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 interface Props {
-	params: { slug: string }
+	params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props) {
+	const { slug } = await params
+	const item = await sanityClient.fetch(
+		groq`*[_type == "item" && slug.current == $slug][0]{
+      name
+    }`,
+		{ slug }
+	)
+
+	return {
+		title: item ? `${item.name} - Harvest of Hearts` : 'Harvest of Hearts',
+	}
 }
 
 export default async function GiftPage({ params }: Props) {

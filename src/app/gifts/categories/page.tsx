@@ -8,6 +8,12 @@ const categoriesQuery = groq`
   ) | order(@ asc)
 `;
 
+export async function generateMetadata() {
+  return {
+		title: 'Categories - Harvest of Hearts',
+	}
+}
+
 export default async function CategoriesIndexPage() {
   const categories: string[] = await sanityClient.fetch(categoriesQuery);
 
