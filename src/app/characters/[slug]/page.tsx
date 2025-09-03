@@ -55,16 +55,16 @@ export default async function CharacterPage({ params }: Props) {
 	return (
 		<div className='rounded-2xl shadow-lg p-4 bg-white'>
 			<div className='flex flex-col justify-center items-center'>
-				<h1 className='text-3xl font-bold mb-2'>{character.name}</h1>
 				{character.image?.asset?.url && (
 					<div>
 						<img
 							src={character.image.asset.url}
 							alt={character.name}
-							className='w-32 h-auto mb-4'
+							className='w-32 h-auto mb-2'
 						/>
 					</div>
 				)}
+				<h1 className='text-3xl font-bold mb-2'>{character.name}</h1>
 				<div className='flex flex-row gap-2'>
 					<p className='text-gray-600 text-sm'>🎂 {character.birthday}</p>
 					<p className='text-gray-600 text-sm'>🏠 {character.location}</p>

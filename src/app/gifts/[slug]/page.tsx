@@ -20,7 +20,6 @@ export default async function GiftPage({ params }: Props) {
 	return (
 		<div className='rounded-2xl shadow-md p-4 bg-white hover:shadow-lg transition'>
 			<div className='flex flex-col justify-center items-center'>
-				<h1 className='text-3xl'>{item.name}</h1>
 				{item.imageUrl && (
 					<div className='my-2'>
 						<Image
@@ -31,8 +30,9 @@ export default async function GiftPage({ params }: Props) {
 						/>
 					</div>
 				)}
+				<h1 className='text-3xl'>{item.name}</h1>
 				<p className='text-gray-600 text-sm italic'>{item.description}</p>
-				<Link href={`category/${item.category}`}>
+				<Link href={`categories/${item.category}`}>
 					<span className='flex bg-[#d98fa3] rounded-2xl p-2 mt-2 text-white text-xs capitalize'>
 						<Tag
 							size={16}
