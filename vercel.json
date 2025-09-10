@@ -1,0 +1,9 @@
+{
+  "ignoreCommand": "echo 'Skipping sanity folder'",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ]
+}

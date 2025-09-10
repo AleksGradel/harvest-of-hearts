@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { Search, Layers } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Item } from '@/lib/sanity/types'
-import { Span } from 'next/dist/trace'
 
 export default function Header() {
 	const [showSearch, setShowSearch] = useState(false)

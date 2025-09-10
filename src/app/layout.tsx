@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/header'
+import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
 	title: 'Harvest of Hearts',
@@ -21,6 +22,7 @@ export default function RootLayout({
 				<div className='min-h-screen bg-[#fff9f0] text-[#333]'>
 					<Header  />
 					<main className='p-4 max-w-4xl mx-auto'>{children}</main>
+					<Footer  />
 				</div>
 			</body>
 		</html>
