@@ -3,6 +3,8 @@
 A cozy web app inspired by **Stardew Valley**, showcasing villagers, gifts, and favorite items.
 Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **Sanity CMS**.
 
+*"This project was lovingly crafted as a tribute to Stardew Valley — a cozy world that continues to inspire creativity and warmth."*
+
 ---
 
 ## 🎨 Features
@@ -102,15 +104,6 @@ npx sanity deploy
 ## 🎨 Styling
 
 * Tailwind CSS is used for styling.
-* Primary color: `#d98fa3` (pinkish rustic tone)
-* Accent/contrast color: `#88A47C` (sage green)
-* Fonts: rustic, cozy combinations for a Stardew-inspired feel
-
----
-
-## ❤️ Footer Text
-
-*"This project was lovingly crafted as a tribute to Stardew Valley — a cozy world that continues to inspire creativity and warmth."*
 
 ---
 
