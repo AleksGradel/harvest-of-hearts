@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Harvest of Hearts 🌾💖
 
-## Getting Started
+A cozy web app inspired by **Stardew Valley**, showcasing villagers, gifts, and favorite items.
+Built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **Sanity CMS**.
 
-First, run the development server:
+---
+
+## 🎨 Features
+
+* View all characters and their gift preferences (loves, likes, dislikes, hates)
+* Browse items by category (food, artisan goods, forage, etc.)
+* Search items dynamically in the header
+* Responsive, rustic/rustic-inspired UI
+* Animated search bar using Framer Motion
+
+---
+
+## 🏗 Project Structure
+
+```
+my-project/
+├── sanity/          # Sanity Studio (do zarządzania treścią)
+├── src/             # Next.js frontend
+├── public/          # Static assets
+├── package.json     # Next.js dependencies and scripts
+├── next.config.js
+└── vercel.json      # Configuration to deploy only Next.js
+```
+
+---
+
+## ⚡ Getting Started (Frontend)
+
+1. Clone this repo:
+
+```bash
+git clone https://github.com/yourusername/harvest-of-hearts.git
+cd harvest-of-hearts
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Add environment variables in `.env.local`:
+
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=yourProjectId
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2025-01-01
+```
+
+4. Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Sanity Studio
 
-## Learn More
+Sanity Studio is stored in the `sanity/` folder.
 
-To learn more about Next.js, take a look at the following resources:
+* Install dependencies inside `sanity/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+cd sanity
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Run Studio locally:
 
-## Deploy on Vercel
+```bash
+npx sanity dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Deploy Studio (optional):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx sanity deploy
+```
+
+> **Note:** Studio is **not deployed on Vercel**. Only the Next.js frontend is deployed.
+
+---
+
+## 🚀 Deployment on Vercel
+
+1. Push your repo to GitHub.
+2. Connect your repository to Vercel.
+3. Make sure the **root folder** for deployment is the Next.js project folder.
+4. **Do not include the `sanity/` folder** in the build; it is ignored via `vercel.json`.
+5. Vercel will automatically build and deploy your Next.js frontend.
+
+---
+
+## 🎨 Styling
+
+* Tailwind CSS is used for styling.
+* Primary color: `#d98fa3` (pinkish rustic tone)
+* Accent/contrast color: `#88A47C` (sage green)
+* Fonts: rustic, cozy combinations for a Stardew-inspired feel
+
+---
+
+## ❤️ Footer Text
+
+*"This project was lovingly crafted as a tribute to Stardew Valley — a cozy world that continues to inspire creativity and warmth."*
+
+---
+
+## 🛠 Tech Stack
+
+* **Next.js** (App Router, TypeScript)
+* **Sanity CMS** (headless content management)
+* **Tailwind CSS** (styling)
+* **Framer Motion** (animations)
+* **Lucide React** (icons)
+
+---
+
+## 📜 License
+
+MIT License
