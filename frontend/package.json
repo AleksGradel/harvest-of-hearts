@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^7.11.1",
     "framer-motion": "^12.23.12",
     "groq": "^3.99.0",
     "lucide-react": "^0.541.0",
