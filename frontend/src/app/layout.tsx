@@ -19,9 +19,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<div className='min-h-screen bg-[#fff9f0] text-[#333]'>
+				<div className='bg-[#fff9f0] text-[#333]'>
 					<Header  />
-					<main className='p-4 max-w-4xl mx-auto'>{children}</main>
+					<main className='min-h-screen p-4 max-w-4xl mx-auto'>{children}</main>
 					<Footer  />
 				</div>
 			</body>
